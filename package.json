@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
+    "build": "tsup",
+    "start": "npm run build && node dist/index.js",
     "dev": "tsx watch --clear-screen=false src/index.ts"
   },
   "keywords": [],
@@ -29,7 +31,18 @@
     "@types/jsonwebtoken": "^9.0.6",
     "@types/morgan": "^1.9.9",
     "ts-node": "^10.9.2",
+    "tsup": "^8.2.4",
     "tsx": "^4.19.0",
     "typescript": "^5.5.4"
+  },
+  "tsup": {
+    "entry": [
+      "src",
+      "!src/**/__tests__/**",
+      "!src/**/*.test.*"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
   }
 }
