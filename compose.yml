@@ -1,0 +1,17 @@
+services:
+  # Users service, the API for the users management
+  users:
+    image: inhumanxd/softco-app
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    ports:
+      - "3000:3000"
+
+    env_file:
+      - .env
+
+    container_name: softco-app
+    restart: unless-stopped
