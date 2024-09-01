@@ -1,5 +1,4 @@
 services:
-  # Users service, the API for the users management
   users:
     image: inhumanxd/softco-app
 
@@ -8,7 +7,7 @@ services:
       dockerfile: Dockerfile
 
     ports:
-      - "3000:3000"
+      - 3003:3000
 
     env_file:
       - .env
