@@ -31,7 +31,7 @@ modify the provided sample.env file and run the project
 - git
 
 ```sh
-  git clone https://github.com/inhumanxd/softco
+  git clone https://github.com/inhumanxd/softco-app
   cd softco
   npm install
   npm start
